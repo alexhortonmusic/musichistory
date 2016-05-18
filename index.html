@@ -4,9 +4,112 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+	<nav>
+		<ul>
+			<li><a href="#" title="view-music">View Music</a></li>
+			<li><a href="#" title="add-music">Add Music</a></li>
+			<li><a href="#" title="profile">Profile</a></li>
+		</ul>
+	</nav>
+
+	<div class="choices">
+		<label>Song Length:
+			<input type="range">
+		</label>
+		<label>Artist:
+			<select name="artist">
+				<option value="options" default disabled>Options</option>
+				<option value="ryan adams">Ryan Adams</option>
+				<option value="white denim">White Denim</option>
+				<option value="alabama shakes">Alabama Shakes</option>
+				<option value="nickel creek">Nickel Creek</option>
+				<option value="brother sister stone">Brother Sister Stone</option>
+			</select>
+		</label>	
+
+		<label>Album:
+			<select name="album">
+				<option value="options" default disabled>Options</option>
+				<option value="heartbreaker"><i>Heartbreaker</i> by Ryan Adams</option>
+				<option value="lemonade"><i>Corsicana Lemonade</i> by White Denim</option>
+				<option value="sound and color"><i>Sound and Color</i> by Alabama Shakes</option>
+				<option value="dotted line"><i>A Dotted Line</i> by Nickel Creek</option>
+				<option value="house ep"><i>The House EP</i> by Brother Sister Stone</option>
+			</select>
+		</label>
+
+		<label>Genre:
+			<div>
+				<label><input type="checkbox" class="rock">Rock</label>
+				<label><input type="checkbox" class="pop">Pop</label>
+				<label><input type="checkbox" class="blues">Blues</label>
+				<label><input type="checkbox" class="classical">Classical</label>
+				<label><input type="checkbox" class="jazz">Jazz</label>
+				<label><input type="checkbox" class="hiphop">Hip Hop</label>
+			</div>
+		</label>
+
+		<button class="filter">Filter</button>
+	</div>
+
+	<div class="history"> 
+		<div class="song">
+			<h1>Song Name</h1>
+				<div class="artist-name">
+					<p>Artist name</p>
+				</div>
+				<div class="album-name">
+					<p>Album name</p>
+				</div>
+				<div class="genre">
+					<p>Genre</p>
+				</div>
+		</div>
+		
+		<div class="song">
+			<h1>Song Name</h1>
+				<div class="artist-name">
+					<p>Artist name</p>
+				</div>
+				<div class="album-name">
+					<p>Album name</p>
+				</div>
+				<div class="genre">
+					<p>Genre</p>
+				</div>
+		</div>
+
+		<div class="song">
+			<h1>"Sweet Carolina"</h1>
+				<div class="artist-name">
+					<p>Ryan Adams</p>
+				</div>
+				<div class="album-name">
+					<p>Heartbreaker</p>
+				</div>
+				<div class="genre">
+					<p>Genre</p>
+				</div>
+		</div>
+
+		<div class="song">
+			<h1>Song Name</h1>
+				<div class="artist-name">
+					<p>Artist name</p>
+				</div>
+				<div class="album-name">
+					<p>Album name</p>
+				</div>
+				<div class="genre">
+					<p>Genre</p>
+				</div>
+		</div>
+
+	</div>
 
 
 </body>
