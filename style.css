@@ -1,0 +1,134 @@
+/*Red = #FFB4B0  
+Blue = #4DD7FA  
+Light yellow = #FEFAC0  
+Dark yellow = #785616*/
+
+/*------------------
+-------GENERAL------
+--------------------*/
+
+body {
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/*-------------------
+---------NAV---------
+---------------------*/
+
+nav {
+	width: 798px;
+	height: 53px;
+	border: 2px solid black;
+	margin: 50px auto;
+	background: #FFB4B0;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline;
+}
+
+/*-------------------
+CHOICES SIDE BAR---------
+---------------------*/
+
+.choices {
+	width: 185px;
+	height: 372px;
+	border: 2px solid black;
+	/*display: inline-block;*/
+	background: #4DD7FA;
+}
+
+.slider,
+.artist-drop,
+.album-drop {
+	display: block;
+}
+
+.artist-drop {
+
+}
+
+.album-drop {
+
+}
+
+.genre {
+
+}
+
+.genre li {
+	list-style: none;
+}
+
+.filter {
+	width: 130px;
+	height: 30px;
+	border-radius: 8%;
+}
+
+/*-------------------
+--------HISTORY---------
+---------------------*/
+
+.history {
+	width: 597px;
+	height: 372px;
+	border: 2px solid black;
+	background: #FEFAC0; 
+	/*display: inline-block;*/
+}
+
+.song {
+	display: block;
+	margin-left: 30px;
+}
+
+.song h2 {
+	color: #785616;
+	font-weight: lighter;
+}
+
+.song p,
+.artist-name,
+.album-name,
+.song-genre {
+	display: inline;
+	font-size: .95em;
+}
+
+.artist-name {
+	padding-right: 10px;
+}
+
+.album-name {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 0 10px;
+
+}
+
+.song-genre {
+	padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

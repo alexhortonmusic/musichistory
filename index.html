@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,12 +17,12 @@
 	</nav>
 
 	<div class="choices">
-		<label>Song Length:
+		<label class="slider">Song Length:
 			<input type="range">
 		</label>
-		<label>Artist:
+		<label class="artist-drop">Artist:
 			<select name="artist">
-				<option value="options" default disabled>Options</option>
+				<option value="options" selected disabled>Options</option>
 				<option value="ryan adams">Ryan Adams</option>
 				<option value="white denim">White Denim</option>
 				<option value="alabama shakes">Alabama Shakes</option>
@@ -31,25 +31,30 @@
 			</select>
 		</label>	
 
-		<label>Album:
+		<label class="album-drop">Album:
 			<select name="album">
-				<option value="options" default disabled>Options</option>
-				<option value="heartbreaker"><i>Heartbreaker</i> by Ryan Adams</option>
-				<option value="lemonade"><i>Corsicana Lemonade</i> by White Denim</option>
-				<option value="sound and color"><i>Sound and Color</i> by Alabama Shakes</option>
-				<option value="dotted line"><i>A Dotted Line</i> by Nickel Creek</option>
-				<option value="house ep"><i>The House EP</i> by Brother Sister Stone</option>
+				<option value="options" selected disabled>Options</option>
+				<option value="heartbreaker">Heartbreaker</option>
+				<option value="lemonade">Corsicana Lemonade</option>
+				<option value="sound and color">Sound and Color</option>
+				<option value="dotted line">A Dotted Line</option>
+				<option value="house ep">The House EP</option>
 			</select>
 		</label>
 
 		<label>Genre:
-			<div>
-				<label><input type="checkbox" class="rock">Rock</label>
-				<label><input type="checkbox" class="pop">Pop</label>
-				<label><input type="checkbox" class="blues">Blues</label>
-				<label><input type="checkbox" class="classical">Classical</label>
-				<label><input type="checkbox" class="jazz">Jazz</label>
-				<label><input type="checkbox" class="hiphop">Hip Hop</label>
+			<div class="genre">
+				<ul>
+					<li><label><input type="checkbox" class="rock">Rock</label></li>
+					<li><label><input type="checkbox" class="folk-rock">Folk-Rock</label></li>
+					<li><label><input type="checkbox" class="soul">Rock-Soul</label></li>
+				</ul>
+
+				<ul>	
+					<li><label><input type="checkbox" class="bluegrass">Bluegrass</label></li>
+					<li><label><input type="checkbox" class="country">Country</label></li>
+					<li><label><input type="checkbox" class="hiphop">Hip Hop</label></li>
+				</ul>
 			</div>
 		</label>
 
@@ -58,54 +63,54 @@
 
 	<div class="history"> 
 		<div class="song">
-			<h1>Song Name</h1>
+			<h2>"Come Back"</h2>
 				<div class="artist-name">
-					<p>Artist name</p>
+					<p>White Denim</p>
 				</div>
 				<div class="album-name">
-					<p>Album name</p>
+					<p><i>Corsicana Lemonade</i></p>
 				</div>
-				<div class="genre">
-					<p>Genre</p>
+				<div class="song-genre">
+					<p>Rock</p>
 				</div>
 		</div>
 		
 		<div class="song">
-			<h1>Song Name</h1>
+			<h2>"Hayloft"</h2>
 				<div class="artist-name">
-					<p>Artist name</p>
+					<p>Nickel Creek</p>
 				</div>
 				<div class="album-name">
-					<p>Album name</p>
+					<p><i>A Dotted Line</i></p>
 				</div>
-				<div class="genre">
-					<p>Genre</p>
+				<div class="song-genre">
+					<p>Bluegrass</p>
 				</div>
 		</div>
 
 		<div class="song">
-			<h1>"Sweet Carolina"</h1>
+			<h2>"Sweet Carolina"</h2>
 				<div class="artist-name">
 					<p>Ryan Adams</p>
 				</div>
 				<div class="album-name">
-					<p>Heartbreaker</p>
+					<p><i>Heartbreaker</i></p>
 				</div>
-				<div class="genre">
-					<p>Genre</p>
+				<div class="song-genre">
+					<p>Folk-Rock</p>
 				</div>
 		</div>
 
 		<div class="song">
-			<h1>Song Name</h1>
+			<h2>"Don't Wanna Fight"</h2>
 				<div class="artist-name">
-					<p>Artist name</p>
+					<p>Alabama Shakes</p>
 				</div>
 				<div class="album-name">
-					<p>Album name</p>
+					<p><i>Sound and Color</i></p>
 				</div>
-				<div class="genre">
-					<p>Genre</p>
+				<div class="song-genre">
+					<p>Rock-Soul</p>
 				</div>
 		</div>
 
