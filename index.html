@@ -16,11 +16,14 @@
 		</ul>
 	</nav>
 
-	<div class="choices">
-		<label class="slider">Song Length:
-			<input type="range">
-		</label>
-		<label class="artist-drop">Artist:
+	<div class="second-level">
+		<div class="choices">
+			<label class="slider">Song Length:</label>
+			<div class="range">
+				<input type="range">
+			</div>
+			
+			<label class="artist-drop">Artist:</label>	
 			<select name="artist">
 				<option value="options" selected disabled>Options</option>
 				<option value="ryan adams">Ryan Adams</option>
@@ -29,93 +32,111 @@
 				<option value="nickel creek">Nickel Creek</option>
 				<option value="brother sister stone">Brother Sister Stone</option>
 			</select>
-		</label>	
+			
 
-		<label class="album-drop">Album:
-			<select name="album">
-				<option value="options" selected disabled>Options</option>
-				<option value="heartbreaker">Heartbreaker</option>
-				<option value="lemonade">Corsicana Lemonade</option>
-				<option value="sound and color">Sound and Color</option>
-				<option value="dotted line">A Dotted Line</option>
-				<option value="house ep">The House EP</option>
-			</select>
-		</label>
+			<label class="album-drop">Album:</label>
+				<select name="album">
+					<option value="options" selected disabled>Options</option>
+					<option value="heartbreaker">Heartbreaker</option>
+					<option value="lemonade">Corsicana Lemonade</option>
+					<option value="sound and color">Sound and Color</option>
+					<option value="dotted line">A Dotted Line</option>
+					<option value="house ep">The House EP</option>
+				</select>
+			
 
-		<label>Genre:
-			<div class="genre">
-				<ul>
-					<li><label><input type="checkbox" class="rock">Rock</label></li>
-					<li><label><input type="checkbox" class="folk-rock">Folk-Rock</label></li>
-					<li><label><input type="checkbox" class="soul">Rock-Soul</label></li>
-				</ul>
+			<label class="genre">Genre:</label>
+				<div>
+					<ul class="left-check">
+						<li>
+							<input type="checkbox" class="rock">
+							<label>Rock</label>
+						</li>
+						<li>
+							<input type="checkbox" class="folk-rock">
+							<label>Folk</label>							
+						</li>
+						<li>
+							<input type="checkbox" class="soul">
+							<label>Soul</label>						
+						</li>
+					</ul>
 
-				<ul>	
-					<li><label><input type="checkbox" class="bluegrass">Bluegrass</label></li>
-					<li><label><input type="checkbox" class="country">Country</label></li>
-					<li><label><input type="checkbox" class="hiphop">Hip Hop</label></li>
-				</ul>
+					<ul class="right-check">	
+						<li>
+							<input type="checkbox" class="bluegrass">
+							<label>Bluegrass</label>
+						</li>
+						<li>
+							<input type="checkbox" class="country">
+							<label>Country</label>						
+						</li>
+						<li>
+							<input type="checkbox" class="hiphop">
+							<label>Hip Hop</label>	
+						</li>
+					</ul>
+				</div>
+			
+
+			<button class="filter">Filter</button>
+		</div>
+
+		<div class="history"> 
+			<div class="song">
+				<h2>"Come Back"</h2>
+					<div class="artist-name">
+						<p>White Denim</p>
+					</div>
+					<div class="album-name">
+						<p><i>Corsicana Lemonade</i></p>
+					</div>
+					<div class="song-genre">
+						<p>Rock</p>
+					</div>
 			</div>
-		</label>
+			
+			<div class="song">
+				<h2>"Hayloft"</h2>
+					<div class="artist-name">
+						<p>Nickel Creek</p>
+					</div>
+					<div class="album-name">
+						<p><i>A Dotted Line</i></p>
+					</div>
+					<div class="song-genre">
+						<p>Bluegrass</p>
+					</div>
+			</div>
 
-		<button class="filter">Filter</button>
-	</div>
+			<div class="song">
+				<h2>"Sweet Carolina"</h2>
+					<div class="artist-name">
+						<p>Ryan Adams</p>
+					</div>
+					<div class="album-name">
+						<p><i>Heartbreaker</i></p>
+					</div>
+					<div class="song-genre">
+						<p>Folk-Rock</p>
+					</div>
+			</div>
 
-	<div class="history"> 
-		<div class="song">
-			<h2>"Come Back"</h2>
-				<div class="artist-name">
-					<p>White Denim</p>
-				</div>
-				<div class="album-name">
-					<p><i>Corsicana Lemonade</i></p>
-				</div>
-				<div class="song-genre">
-					<p>Rock</p>
-				</div>
-		</div>
-		
-		<div class="song">
-			<h2>"Hayloft"</h2>
-				<div class="artist-name">
-					<p>Nickel Creek</p>
-				</div>
-				<div class="album-name">
-					<p><i>A Dotted Line</i></p>
-				</div>
-				<div class="song-genre">
-					<p>Bluegrass</p>
-				</div>
-		</div>
+			<div class="song">
+				<h2>"Don't Wanna Fight"</h2>
+					<div class="artist-name">
+						<p>Alabama Shakes</p>
+					</div>
+					<div class="album-name">
+						<p><i>Sound and Color</i></p>
+					</div>
+					<div class="song-genre">
+						<p>Rock-Soul</p>
+					</div>
+			</div>
 
-		<div class="song">
-			<h2>"Sweet Carolina"</h2>
-				<div class="artist-name">
-					<p>Ryan Adams</p>
-				</div>
-				<div class="album-name">
-					<p><i>Heartbreaker</i></p>
-				</div>
-				<div class="song-genre">
-					<p>Folk-Rock</p>
-				</div>
-		</div>
-
-		<div class="song">
-			<h2>"Don't Wanna Fight"</h2>
-				<div class="artist-name">
-					<p>Alabama Shakes</p>
-				</div>
-				<div class="album-name">
-					<p><i>Sound and Color</i></p>
-				</div>
-				<div class="song-genre">
-					<p>Rock-Soul</p>
-				</div>
 		</div>
 
 	</div>
-
-
 </body>
 </html>

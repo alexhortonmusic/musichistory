@@ -22,7 +22,7 @@ nav {
 	width: 798px;
 	height: 53px;
 	border: 2px solid black;
-	margin: 50px auto;
+	margin: 50px auto 20px;
 	background: #FFB4B0;
 }
 
@@ -30,6 +30,18 @@ nav ul li {
 	list-style: none;
 	display: inline;
 }
+
+
+/*--grouping history and choices box for ease of layout---*/
+
+.second-level {
+	margin: 0 auto;
+	width: 798px;
+	height: 500px;
+	/*border: 1px solid black;*/
+	padding-top: -20px;
+}
+
 
 /*-------------------
 CHOICES SIDE BAR---------
@@ -39,8 +51,9 @@ CHOICES SIDE BAR---------
 	width: 185px;
 	height: 372px;
 	border: 2px solid black;
-	/*display: inline-block;*/
+	display: inline-block;
 	background: #4DD7FA;
+	
 }
 
 .slider,
@@ -49,26 +62,67 @@ CHOICES SIDE BAR---------
 	display: block;
 }
 
-.artist-drop {
+.slider {
+	margin: 10px;
 
+}
+
+.slider input {
+	width: 110%;
+}
+
+.range {
+	margin: 10px 20px 10px 30px;
+}
+.artist-drop {
+	margin: 10px;
 }
 
 .album-drop {
+	margin: 10px;
+}
 
+.album-drop select {
+	margin-bottom: 10px;
 }
 
 .genre {
+	margin: 10px 10px 20px;
+}
+
+/*.genre li {
+	list-style: none;
+	width: 45%;
+
+}.genre ul {
+	margin: 0;
+}*/
+
+.left-check,
+.right-check {
+	list-style: none;
+}
+
+.left-check {
+	/*width: 45%;*/
+	display: inline;
+	padding: 0;
+	margin-top: 10px;
 
 }
 
-.genre li {
-	list-style: none;
+.right-check {
+	/*width: 54%;*/
+	display: inline;
+	padding: 0;
 }
 
 .filter {
 	width: 130px;
 	height: 30px;
 	border-radius: 8%;
+	margin-left: 25px;
+	margin-top: 10px;
 }
 
 /*-------------------
@@ -80,7 +134,9 @@ CHOICES SIDE BAR---------
 	height: 372px;
 	border: 2px solid black;
 	background: #FEFAC0; 
-	/*display: inline-block;*/
+	display: inline-block;
+	/*margin-left: 3.57px;*/
+	float: right;
 }
 
 .song {
