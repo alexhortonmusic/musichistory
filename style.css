@@ -38,7 +38,6 @@ nav ul li {
 	margin: 0 auto;
 	width: 798px;
 	height: 500px;
-	/*border: 1px solid black;*/
 	padding-top: -20px;
 }
 
@@ -48,7 +47,7 @@ CHOICES SIDE BAR---------
 ---------------------*/
 
 .choices {
-	width: 185px;
+	width: 205px;
 	height: 372px;
 	border: 2px solid black;
 	display: inline-block;
@@ -78,50 +77,64 @@ CHOICES SIDE BAR---------
 	margin: 10px;
 }
 
+.artist {
+	margin-left: 10px;
+}
+
+.album {
+	margin-left: 10px;
+}
+
 .album-drop {
 	margin: 10px;
 }
 
-.album-drop select {
-	margin-bottom: 10px;
-}
-
 .genre {
-	margin: 10px 10px 20px;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
-/*.genre li {
-	list-style: none;
-	width: 45%;
-
-}.genre ul {
-	margin: 0;
-}*/
-
-.left-check,
-.right-check {
-	list-style: none;
-}
 
 .left-check {
-	/*width: 45%;*/
-	display: inline;
-	padding: 0;
-	margin-top: 10px;
+	width: 40%;
+	/*display: inline;*/	
+	margin-left: 15px;
+	float: left;
 
 }
 
 .right-check {
-	/*width: 54%;*/
+	/*display: inline;*/
+}
+
+.left-check ul,
+.right-check ul {
+	list-style: none;
+	margin: 0;
 	display: inline;
+}
+
+.left-check ul {
+	/*float: left;*/
+	width: 40%;
 	padding: 0;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+
+.right-check ul {
+	/*float: left;*/
+	/*width: 54%;*/
+	margin-right: 0;
+	margin-left: ;
 }
 
 .filter {
 	width: 130px;
 	height: 30px;
 	border-radius: 8%;
-	margin-left: 25px;
+	margin-left: 40px;
 	margin-top: 10px;
 }
 
@@ -130,12 +143,11 @@ CHOICES SIDE BAR---------
 ---------------------*/
 
 .history {
-	width: 597px;
+	width: 577px;
 	height: 372px;
 	border: 2px solid black;
 	background: #FEFAC0; 
 	display: inline-block;
-	/*margin-left: 3.57px;*/
 	float: right;
 }
 
@@ -171,14 +183,6 @@ CHOICES SIDE BAR---------
 .song-genre {
 	padding-left: 10px;
 }
-
-
-
-
-
-
-
-
 
 
 

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,8 +24,8 @@
 				<input type="range">
 			</div>
 			
-			<label class="artist-drop">Artist:</label>	
-			<select name="artist">
+			<label class="artist">Artist:</label>	
+			<select class="artist-drop" name="artist">
 				<option value="options" selected disabled>Options</option>
 				<option value="ryan adams">Ryan Adams</option>
 				<option value="white denim">White Denim</option>
@@ -34,8 +35,8 @@
 			</select>
 			
 
-			<label class="album-drop">Album:</label>
-				<select name="album">
+			<label class="album">Album:</label>
+				<select class="album-drop" name="album">
 					<option value="options" selected disabled>Options</option>
 					<option value="heartbreaker">Heartbreaker</option>
 					<option value="lemonade">Corsicana Lemonade</option>
@@ -43,40 +44,42 @@
 					<option value="dotted line">A Dotted Line</option>
 					<option value="house ep">The House EP</option>
 				</select>
+				
 			
 
-			<label class="genre">Genre:</label>
-				<div>
-					<ul class="left-check">
-						<li>
-							<input type="checkbox" class="rock">
-							<label>Rock</label>
-						</li>
-						<li>
-							<input type="checkbox" class="folk-rock">
-							<label>Folk</label>							
-						</li>
-						<li>
-							<input type="checkbox" class="soul">
-							<label>Soul</label>						
-						</li>
-					</ul>
-
-					<ul class="right-check">	
-						<li>
-							<input type="checkbox" class="bluegrass">
-							<label>Bluegrass</label>
-						</li>
-						<li>
-							<input type="checkbox" class="country">
-							<label>Country</label>						
-						</li>
-						<li>
-							<input type="checkbox" class="hiphop">
-							<label>Hip Hop</label>	
-						</li>
-					</ul>
-				</div>
+			<p class="genre">Genre:</p>
+			<div class="left-check">
+				<ul>
+					<li>
+						<input type="checkbox" class="rock">
+						<label>Rock</label>
+					</li>
+					<li>
+						<input type="checkbox" class="folk-rock">
+						<label>Folk</label>							
+					</li>
+					<li>
+						<input type="checkbox" class="soul">
+						<label>Soul</label>						
+					</li>
+				</ul>
+			</div>
+			<div class="right-check">
+				<ul>	
+					<li>
+						<input type="checkbox" class="bluegrass">
+						<label>Bluegrass</label>
+					</li>
+					<li>
+						<input type="checkbox" class="country">
+						<label>Country</label>						
+					</li>
+					<li>
+						<input type="checkbox" class="hiphop">
+						<label>Hip Hop</label>	
+					</li>
+				</ul>
+			</div>
 			
 
 			<button class="filter">Filter</button>
