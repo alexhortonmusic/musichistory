@@ -144,7 +144,7 @@ CHOICES SIDE BAR---------
 
 .history {
 	width: 577px;
-	height: 372px;
+	height: 485px;
 	border: 2px solid black;
 	background: #FEFAC0; 
 	display: inline-block;
@@ -159,6 +159,7 @@ CHOICES SIDE BAR---------
 .song h2 {
 	color: #785616;
 	font-weight: lighter;
+	margin-bottom: 10px;
 }
 
 .song p,

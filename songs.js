@@ -1,37 +1,67 @@
 var songs = [
-"The Logical Song > by Supertr@amp on the album Breakfast in America",
-"Another Brick in the Wall > by Pink Floyd on the album The Wall",
-"Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction",
-"Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill"
+{
+	song: "The Logical Song",
+	band: "Supertramp", 
+	album: "Breakfast in America",
+	genre: "Art-Rock"
+},
+{
+	song: "Another Brick in the Wall",
+	band: "Pink Floyd",
+	album: "The Wall",
+	genre: "Psychadelic-Rock"
+},
+{
+	song: "Welcome to the Jungle",
+	band: "Guns & Roses",
+	album: "Appetite for Destruction",
+	genre: "Hard Rock"
+},
+{
+	song: "Ironic",
+	band: "Alanis Morisette",
+	album: "Jagged Little Pill",
+	genre: "Alt-Rock"
+}
 ];
 
-songs.unshift("Frankenstein > by Edgar Winter Group on the album They Only Come Out at Night");
-songs.push("Stairway to Heaven > by Led Zeppelin on the album IV");
+var frankenstein = {
+	song: "Frankenstein",
+	band: "Edgar Winter Group",
+	album: "They Only Come Out At Night",
+	genre: "Classic Rock"
+};
+
+var levee = {
+	song: "When the Levee Breaks",
+	band: "Led Zeppelin",
+	album: "IV",
+	genre: "Blues-Rock"
+};
+
+songs.unshift(frankenstein);
+songs.push(levee);
 
 var songsLength = songs.length;
 
-var element = document.getElementById("container");
+var songContainer = document.getElementById("container");
 
-for (var i = 0; i < songsLength; i++) {
-	var currentSong = songs[i];
-	currentSong = currentSong.replace(/>/g, "-");
-	currentSong = currentSong.replace(/[@!*]/g,'');
-	element.innerHTML += currentSong;
-	}
-
-
-
-
-
-// `<div class="song">
-//                   <h2>${songs[i].song}</h2>
-//                   <div class="artist-name">
-//                     <p>${songs[i].artist}</p>
-//                   </div>
-//                   <div class="album-name">
-//                     <p><i>${songs[i].album}</i></p>
-//                   </div>
-//                  </div>`
+songs.forEach(function (song) {
+	songContainer.innerHTML += `
+		<div class="song">
+			<h2>${song.song}</h2>
+			<div class="artist-name">
+				<p>${song.band}</p>
+			</div>
+			<div class="album-name">
+				<p><i>${song.album}</i></p>
+			</div>
+			<div class="song-genre">
+				<p>${song.genre}</p>
+			</div>
+		</div>
+	`;
+	});
 
 
 // Use JavaScript arrays, loops, and innerHTML to show the music you love.
