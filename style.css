@@ -32,7 +32,7 @@ nav ul li {
 }
 
 
-/*--grouping history and choices box for ease of layout---*/
+/*--grouping history and choices box together for ease of layout---*/
 
 .second-level {
 	margin: 0 auto;
@@ -184,12 +184,3 @@ CHOICES SIDE BAR---------
 .song-genre {
 	padding-left: 10px;
 }
-
-
-
-
-
-
-
-
-
