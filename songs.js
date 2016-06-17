@@ -1,14 +1,17 @@
 var songContainer = document.getElementById("container");
 
-function executeCodeWhenFileLoads () {
-	var jFile = JSON.parse(event.target.responseText);
-	console.log("jFile", jFile);	
+var jFile;
+var counter = 0;
 
-	var songsLength = jFile.songs.length;
+function executeCodeWhenFileLoads () {
+	jFile = JSON.parse(event.target.responseText);
+	console.log("jFile", jFile);	
 	
 	jFile.songs.forEach(function (song) {
+		counter++;
+		// adds songs to DOM
 		songContainer.innerHTML += `
-			<div class="song">
+			<div class="song" id="song-${counter}">
 				<h2>${song.song}</h2>
 				<div class="artist-name">
 					<p>${song.band}</p>
@@ -19,14 +22,28 @@ function executeCodeWhenFileLoads () {
 				<div class="song-genre">
 					<p>${song.genre}</p>
 				</div>
+				<button class="delete" id="btn-${counter}">Delete</button>
 			</div>
-			`;
-		});
-	};
+		`;
+	});
+};
 
 function executeIfFilesFailToLoad () {
 	songContainer.innerHTML = ("error");
 }
+
+//-----Delete Button
+document.querySelector("body").addEventListener("click", function(event) {
+	if (event.target.parentNode.className === "song") {
+  	var clickedBtn = event.target.id.split("-")[1];//delete button
+  	var songToDelete = document.getElementById("song-" + `${clickedBtn }`);//song
+  	console.log("songToDelete", songToDelete);
+		container.removeChild(songToDelete);
+		jFile.songs.splice(clickedBtn, 1, {});
+	}
+});
+
+//--------XHR---------//
 
 var myRequest = new XMLHttpRequest();
 

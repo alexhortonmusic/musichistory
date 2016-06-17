@@ -144,7 +144,6 @@ CHOICES SIDE BAR---------
 
 .history {
 	width: 577px;
-	height: 485px;
 	border: 2px solid black;
 	background: #FEFAC0; 
 	display: inline-block;
@@ -154,6 +153,7 @@ CHOICES SIDE BAR---------
 .song {
 	display: block;
 	margin-left: 30px;
+	margin-bottom: 15px;
 }
 
 .song h2 {
@@ -184,3 +184,14 @@ CHOICES SIDE BAR---------
 .song-genre {
 	padding-left: 10px;
 }
+
+.delete {
+	height: 16px;
+	margin-left: 10px;
+	border-radius: 8%;
+	font-size: .7em;
+	background: white;
+	border: 1px solid black;
+}
+
+
