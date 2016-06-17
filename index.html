@@ -12,86 +12,90 @@
 	<nav>
 		<ul>
 			<li><a href="#" title="view-music">View Music</a></li>
-			<li><a href="#" title="view-music">List Music</a></li>
-			<li><a href="#" title="add-music">Add Music</a></li>
+			<li><a href="#" title="view-music" id="listMusicView">List Music</a></li>
+			<li><a href="#" title="add-music" id="addMusicView">Add Music</a></li>
 			<li><a href="#" title="profile">Profile</a></li>
 		</ul>
 	</nav>
 
-	<div class="second-level">
-		<div class="choices">
-			<label class="slider">Song Length:</label>
-			<div class="range">
-				<input type="range">
-			</div>
-			
-			<label class="artist">Artist:</label>	
-			<select class="artist-drop" name="artist">
-				<option value="options" selected disabled>Options</option>
-				<option value="ryan adams">Ryan Adams</option>
-				<option value="white denim">White Denim</option>
-				<option value="alabama shakes">Alabama Shakes</option>
-				<option value="nickel creek">Nickel Creek</option>
-				<option value="brother sister stone">Brother Sister Stone</option>
-			</select>
-			
-
-			<label class="album">Album:</label>
-				<select class="album-drop" name="album">
+	<div class="second-level" id="second-level">
+		<div id="listView">
+			<div class="choices">
+				<label class="slider">Song Length:</label>
+				<div class="range">
+					<input type="range">
+				</div>
+				
+				<label class="artist">Artist:</label>	
+				<select class="artist-drop" name="artist">
 					<option value="options" selected disabled>Options</option>
-					<option value="heartbreaker">Heartbreaker</option>
-					<option value="lemonade">Corsicana Lemonade</option>
-					<option value="sound and color">Sound and Color</option>
-					<option value="dotted line">A Dotted Line</option>
-					<option value="house ep">The House EP</option>
+					<option value="ryan adams">Ryan Adams</option>
+					<option value="white denim">White Denim</option>
+					<option value="alabama shakes">Alabama Shakes</option>
+					<option value="nickel creek">Nickel Creek</option>
+					<option value="brother sister stone">Brother Sister Stone</option>
 				</select>
 				
-			
 
-			<p class="genre">Genre:</p>
-			<div class="left-check">
-				<ul>
-					<li>
-						<input type="checkbox" class="rock">
-						<label>Rock</label>
-					</li>
-					<li>
-						<input type="checkbox" class="folk-rock">
-						<label>Folk</label>							
-					</li>
-					<li>
-						<input type="checkbox" class="soul">
-						<label>Soul</label>						
-					</li>
-				</ul>
+				<label class="album">Album:</label>
+					<select class="album-drop" name="album">
+						<option value="options" selected disabled>Options</option>
+						<option value="heartbreaker">Heartbreaker</option>
+						<option value="lemonade">Corsicana Lemonade</option>
+						<option value="sound and color">Sound and Color</option>
+						<option value="dotted line">A Dotted Line</option>
+						<option value="house ep">The House EP</option>
+					</select>
+					
+				
+
+				<p class="genre">Genre:</p>
+				<div class="left-check">
+					<ul>
+						<li>
+							<input type="checkbox" class="rock">
+							<label>Rock</label>
+						</li>
+						<li>
+							<input type="checkbox" class="folk-rock">
+							<label>Folk</label>							
+						</li>
+						<li>
+							<input type="checkbox" class="soul">
+							<label>Soul</label>						
+						</li>
+					</ul>
+				</div>
+				<div class="right-check">
+					<ul>	
+						<li>
+							<input type="checkbox" class="bluegrass">
+							<label>Bluegrass</label>
+						</li>
+						<li>
+							<input type="checkbox" class="country">
+							<label>Country</label>						
+						</li>
+						<li>
+							<input type="checkbox" class="hiphop">
+							<label>Hip Hop</label>	
+						</li>
+					</ul>
+				</div>
+				
+
+				<button class="filter">Filter</button>
 			</div>
-			<div class="right-check">
-				<ul>	
-					<li>
-						<input type="checkbox" class="bluegrass">
-						<label>Bluegrass</label>
-					</li>
-					<li>
-						<input type="checkbox" class="country">
-						<label>Country</label>						
-					</li>
-					<li>
-						<input type="checkbox" class="hiphop">
-						<label>Hip Hop</label>	
-					</li>
-				</ul>
+
+			<div class="history">
+				<div id="container"></div>
+				<div id="container2"></div>
+				<div id="more"></div>
 			</div>
-			
-
-			<button class="filter">Filter</button>
 		</div>
-
-		<div class="history">
-			<div id="container"></div>
-			<div id="container2"></div>
-			<div id="more"></div>
-		</div>
-
-<script src="songs.js"></script>
+	</div>
+	<script src="js/songs.js"></script>
+	<script src="js/addMusicView.js"></script>
+	<!-- <script src="js/listMusicView.js"></script> -->
 </body>
 </html>
