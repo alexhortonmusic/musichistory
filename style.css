@@ -194,4 +194,9 @@ CHOICES SIDE BAR---------
 	border: 1px solid black;
 }
 
+#more {
+	float: right;
+	font-size: 1.7em;
+	margin-right: 20px;
+}
 

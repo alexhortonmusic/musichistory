@@ -29,36 +29,6 @@
       "band": "Led Zeppelin",
       "album": "IV",
       "genre": "Blues-Rock"      
-    },
-    {
-      "song": "The Logical Song",
-      "band": "Supertramp", 
-      "album": "Breakfast in America",
-      "genre": "Art-Rock"
-    },
-    {
-      "song": "America",
-      "band": "Simon & Garfunkel", 
-      "album": "Bookends",
-      "genre": "Folk"
-    },
-    {
-      "song": "Guns and Ships",
-      "band": "Original Cast", 
-      "album": "Hamilton",
-      "genre": "Hip-Hop/Broadway"
-    },
-    {
-      "song": "I Don't Care About You",
-      "band": "Lake Street Dive", 
-      "album": "Side Pony",
-      "genre": "Soul"
-    },
-    {
-      "song": "Run Baby Run",
-      "band": "Magnolia Sons", 
-      "album": "Run Baby Run",
-      "genre": "Motown-Pop"
     }
   ]
 }

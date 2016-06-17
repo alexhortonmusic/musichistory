@@ -1,13 +1,14 @@
 var songContainer = document.getElementById("container");
+var songContainer2 = document.getElementById('container2');
+var more = document.getElementById('more');
 
-var jFile;
+var songJSON;
 var counter = 0;
 
 function executeCodeWhenFileLoads () {
-	jFile = JSON.parse(event.target.responseText);
-	console.log("jFile", jFile);	
+	songJSON = JSON.parse(event.target.responseText);	
 	
-	jFile.songs.forEach(function (song) {
+	songJSON.songs.forEach(function (song) {
 		counter++;
 		// adds songs to DOM
 		songContainer.innerHTML += `
@@ -26,11 +27,49 @@ function executeCodeWhenFileLoads () {
 			</div>
 		`;
 	});
+	more.innerHTML = `
+		<a href="#">More ></a>
+	`;
 };
 
 function executeIfFilesFailToLoad () {
 	songContainer.innerHTML = ("error");
 }
+
+function executeNewCodeWhenFileLoads () {
+	song2JSON = JSON.parse(event.target.responseText);	
+	
+	song2JSON.songs.forEach(function (song) {
+		counter = 5;
+		counter++;
+		// adds songs to DOM
+		songContainer2.innerHTML += `
+			<div class="song" id="song-${counter}">
+				<h2>${song.song}</h2>
+				<div class="artist-name">
+					<p>${song.band}</p>
+				</div>
+				<div class="album-name">
+					<p><i>${song.album}</i></p>
+				</div>
+				<div class="song-genre">
+					<p>${song.genre}</p>
+				</div>
+				<button class="delete" id="btn-${counter}">Delete</button>
+			</div>
+		`;
+	});
+};
+
+//------MORE SONGS TO ADD------//
+more.innerHTML = `
+	<a href="#">More ></a>
+`;
+
+more.addEventListener('click', function (event) {
+	song2Request.addEventListener('load', executeNewCodeWhenFileLoads);
+	song2Request.send();
+})
 
 //-----Delete Button
 document.querySelector("body").addEventListener("click", function(event) {
@@ -39,20 +78,31 @@ document.querySelector("body").addEventListener("click", function(event) {
   	var songToDelete = document.getElementById("song-" + `${clickedBtn }`);//song
   	console.log("songToDelete", songToDelete);
 		container.removeChild(songToDelete);
-		jFile.songs.splice(clickedBtn, 1, {});
+		songJSON.songs.splice(clickedBtn, 1, {});
 	}
 });
 
+
+
 //--------XHR---------//
 
-var myRequest = new XMLHttpRequest();
+var songRequest = new XMLHttpRequest();
 
-myRequest.addEventListener("load", executeCodeWhenFileLoads);
-myRequest.addEventListener("error", executeIfFilesFailToLoad);
+songRequest.addEventListener("load", executeCodeWhenFileLoads);
+songRequest.addEventListener("error", executeIfFilesFailToLoad);
 
-myRequest.open("GET", "songs.json");
+songRequest.open("GET", "songs.json");
 
-myRequest.send();
+songRequest.send();
 
-console.log("myRequest", myRequest);
+var song2Request = new XMLHttpRequest();
+
+
+song2Request.addEventListener('error', executeIfFilesFailToLoad);
+
+song2Request.open("GET", "songs2.json");
+
+
+
+
 
