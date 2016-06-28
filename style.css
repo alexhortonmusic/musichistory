@@ -59,10 +59,13 @@ nav ul li {
 	height: 500px;
 }
 
-.hide {
+.hideAddView {
 	display: none;
 }
 
+.hideListView {
+	display: none;
+}
 
 /*-------------------
 CHOICES SIDE BAR---------
