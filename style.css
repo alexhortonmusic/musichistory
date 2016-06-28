@@ -20,7 +20,7 @@ body {
 
 nav {
 	width: 798px;
-	height: 53px;
+	/*height: 53px;*/
 	border: 2px solid black;
 	margin: 50px auto 20px;
 	background: #FFB4B0;
@@ -31,6 +31,25 @@ nav ul li {
 	display: inline;
 }
 
+.addMusic {
+	margin: 50px auto;
+	display: flex;
+	flex-direction: column;
+	width: 140px;
+	justify-content: space-around;
+}
+
+.musicInput {
+	width: 120px;
+	margin: 15px 0;
+	border: 2px solid black;
+}
+
+#addBtn {
+	width: 60px;
+	border: 2px solid black;
+}
+
 
 /*--grouping history and choices box together for ease of layout---*/
 
@@ -38,9 +57,15 @@ nav ul li {
 	margin: 0 auto;
 	width: 798px;
 	height: 500px;
-	padding-top: -20px;
 }
 
+.hideAddView {
+	display: none;
+}
+
+.hideListView {
+	display: none;
+}
 
 /*-------------------
 CHOICES SIDE BAR---------
@@ -52,7 +77,10 @@ CHOICES SIDE BAR---------
 	border: 2px solid black;
 	display: inline-block;
 	background: #4DD7FA;
-	
+}
+
+.choicesHide {
+	display: none;
 }
 
 .slider,
@@ -200,3 +228,6 @@ CHOICES SIDE BAR---------
 	margin-right: 20px;
 }
 
+.hideMore {
+	display: none;
+}

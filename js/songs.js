@@ -69,6 +69,7 @@ more.innerHTML = `
 more.addEventListener('click', function (event) {
 	song2Request.addEventListener('load', executeNewCodeWhenFileLoads);
 	song2Request.send();
+	more.classList.add('hideMore');
 })
 
 //-----Delete Button
@@ -91,7 +92,7 @@ var songRequest = new XMLHttpRequest();
 songRequest.addEventListener("load", executeCodeWhenFileLoads);
 songRequest.addEventListener("error", executeIfFilesFailToLoad);
 
-songRequest.open("GET", "songs.json");
+songRequest.open("GET", "js/songs.json");
 
 songRequest.send();
 
@@ -100,7 +101,7 @@ var song2Request = new XMLHttpRequest();
 
 song2Request.addEventListener('error', executeIfFilesFailToLoad);
 
-song2Request.open("GET", "songs2.json");
+song2Request.open("GET", "js/songs2.json");
 
 
 
