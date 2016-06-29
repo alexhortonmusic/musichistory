@@ -1,22 +1,22 @@
 $(document).ready(function () {
-	var songContainer = document.getElementById("container");
-	var songContainer2 = document.getElementById('container2');
-	var more = document.getElementById('more');
+	var songContainer = $("#container");
+	var songContainer2 = $('#container2');
+	var more = $('#more');
 
 	var songJSON;
 	var counter = 0;
 	var songArr = [];
 
-	function executeCodeWhenFileLoads () {
-		songJSON = JSON.parse(event.target.responseText);	
+	function executeCodeWhenFileLoads (songData) {
+		// songJSON = JSON.parse(event.target.responseText);	
+		let songs = songData.songs;
 		
-		songJSON.songs.forEach(function (song) {
-			console.log("song", song);
+		$.each(songs, (key, song) => {
 			songArr.push(song);
 			console.log("songArr", songArr);
 			counter++;
 			// adds songs to DOM
-			songContainer.innerHTML += `
+			songContainer.append(`
 				<div class="song" id="song-${counter}">
 					<h2>${song.song}</h2>
 					<div class="artist-name">
@@ -30,27 +30,24 @@ $(document).ready(function () {
 					</div>
 					<button class="delete" id="btn-${counter}">Delete</button>
 				</div>
-			`;
+			`);
 		});
-		more.innerHTML = `
-			<a href="#">More ></a>
-		`;
+		more.html(`<a href="#">More ></a>`);
 	};
 
 	function executeIfFilesFailToLoad () {
-		songContainer.innerHTML = ("error");
+		songContainer.html("error");
 	}
 
-	function executeNewCodeWhenFileLoads () {
-		song2JSON = JSON.parse(event.target.responseText);	
-		
+	function executeNewCodeWhenFileLoads (songData2) {
+		// song2JSON = JSON.parse(event.target.responseText);	
+		let songs = songData2.songs;
 		counter = 5;
-		song2JSON.songs.forEach(function (song) {
-			console.log("song", song);
+		$.each(songs, (key, song) => {
 			songArr.push(song);
 			counter++;
 			// adds songs to DOM
-			songContainer2.innerHTML += `
+			songContainer2.append(`
 				<div class="song" id="song-${counter}">
 					<h2>${song.song}</h2>
 					<div class="artist-name">
@@ -64,19 +61,18 @@ $(document).ready(function () {
 					</div>
 					<button class="delete" id="btn-${counter}">Delete</button>
 				</div>
-			`;
+			`);
 		});
+		console.log("songArr", songArr);
 	};
 
-	//------MORE SONGS TO ADD------//
-	more.innerHTML = `
-		<a href="#">More ></a>
-	`;
+	//------ADDING MORE SONGS------//
 
-	more.addEventListener('click', function (event) {
-		song2Request.addEventListener('load', executeNewCodeWhenFileLoads);
-		song2Request.send();
-		more.classList.add('hideMore');
+	more.on('click', function (event) {
+		$.ajax({
+			url: "js/songs2.json"
+		}).done(executeNewCodeWhenFileLoads)
+		more.addClass('hideMore');
 	})
 
 	
@@ -97,7 +93,7 @@ $(document).ready(function () {
 		}
 		songArr.push(songObj);
 		counter++;
-		songContainer2.innerHTML += `
+		songContainer2.append(`
 			<div class="song" id="song-${counter}">
 					<h2>${songInput.val()}</h2>
 					<div class="artist-name">
@@ -110,12 +106,12 @@ $(document).ready(function () {
 						<p>${genreInput.val()}</p>
 					</div>
 					<button class="delete" id="btn-${counter}">Delete</button>
-				</div>`;
+			</div>
+		`);
 		songInput.val("");
 		artistInput.val("");
 		albumInput.val("");
 		genreInput.val("");
-
 	}
 
 
@@ -126,27 +122,15 @@ $(document).ready(function () {
 	  	var songToDelete = document.getElementById("song-" + `${clickedBtn }`);//song
 	  	console.log("songToDelete", songToDelete);
 			container.removeChild(songToDelete);
-			songJSON.songs.splice(clickedBtn, 1, {});
+			songArr.splice(clickedBtn, 1, {});
 		}
 	});
 
 	//--------XHR---------//
 
-	var songRequest = new XMLHttpRequest();
-
-	songRequest.addEventListener("load", executeCodeWhenFileLoads);
-	songRequest.addEventListener("error", executeIfFilesFailToLoad);
-
-	songRequest.open("GET", "js/songs.json");
-
-	songRequest.send();
-
-	var song2Request = new XMLHttpRequest();
-
-
-	song2Request.addEventListener('error', executeIfFilesFailToLoad);
-
-	song2Request.open("GET", "js/songs2.json");
+	$.ajax({
+		url: "js/songs.json"
+	}).done(executeCodeWhenFileLoads);
 
 })
 
