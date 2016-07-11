@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,34 +27,22 @@
 				</div>
 				
 				<label class="artist">Artist:</label>	
-				<select class="artist-drop" name="artist">
-					<option value="options" selected disabled>Options</option>
-					<option value="ryan adams">Ryan Adams</option>
-					<option value="white denim">White Denim</option>
-					<option value="alabama shakes">Alabama Shakes</option>
-					<option value="nickel creek">Nickel Creek</option>
-					<option value="brother sister stone">Brother Sister Stone</option>
-				</select>
+					<select id="artist-drop">
+						<option disabled selected>Choose an artist</option>
+					</select>
 				
-
 				<label class="album">Album:</label>
-					<select class="album-drop" name="album">
-						<option value="options" selected disabled>Options</option>
-						<option value="heartbreaker">Heartbreaker</option>
-						<option value="lemonade">Corsicana Lemonade</option>
-						<option value="sound and color">Sound and Color</option>
-						<option value="dotted line">A Dotted Line</option>
-						<option value="house ep">The House EP</option>
+					<select id="album-drop">
+						<option disabled selected>Choose an album</option>
 					</select>
 					
-				
 
 				<p class="genre">Genre:</p>
 				<div class="left-check">
 					<ul>
 						<li>
 							<input type="checkbox" class="rock">
-							<label>Rock</label>
+							<label>Motown</label>
 						</li>
 						<li>
 							<input type="checkbox" class="folk-rock">
@@ -70,7 +58,7 @@
 					<ul>	
 						<li>
 							<input type="checkbox" class="bluegrass">
-							<label>Bluegrass</label>
+							<label>Broadway</label>
 						</li>
 						<li>
 							<input type="checkbox" class="country">
@@ -78,7 +66,7 @@
 						</li>
 						<li>
 							<input type="checkbox" class="hiphop">
-							<label>Hip Hop</label>	
+							<label>Folk-Rock</label>	
 						</li>
 					</ul>
 				</div>
@@ -89,10 +77,10 @@
 
 			<div class="history">
 				<div id="container"></div>
-				<div id="container2"></div>
 				<div id="more"></div>
 			</div>
 		</div>
+
 		<div class="addMusic hideAddView" id="addMusic">
 				<label>Song name:</label>
 				<input type="text" id="songInput" class="musicInput">
@@ -107,8 +95,8 @@
 	</div>
 
 	<script  src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="crossorigin="anonymous"></script>
-	<script src="js/songs.js"></script>
-	<script src="js/addMusicView.js"></script>
-	<script src="js/listMusicView.js"></script>
+	<script src="src/scripts/index.js"></script>
+	<script src="src/scripts/addMusicView.js"></script>
+	<script src="src/scripts/listMusicView.js"></script>
 </body>
 </html>

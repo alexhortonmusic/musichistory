@@ -1,3 +1,4 @@
+'use strict';
 $(document).ready(function () {
 
 	var addMusicView = $('#addMusicView');// add music link

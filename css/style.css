@@ -84,8 +84,8 @@ CHOICES SIDE BAR---------
 }
 
 .slider,
-.artist-drop,
-.album-drop {
+#artist-drop,
+#album-drop {
 	display: block;
 }
 
@@ -101,8 +101,10 @@ CHOICES SIDE BAR---------
 .range {
 	margin: 10px 20px 10px 30px;
 }
-.artist-drop {
+
+#artist-drop {
 	margin: 10px;
+	width: 140px;
 }
 
 .artist {
@@ -113,13 +115,13 @@ CHOICES SIDE BAR---------
 	margin-left: 10px;
 }
 
-.album-drop {
+#album-drop {
 	margin: 10px;
+	width: 140px;
 }
 
 .genre {
-	margin-top: 10px;
-	margin-left: 10px;
+	margin: 10px 0 0 10px;
 }
 
 

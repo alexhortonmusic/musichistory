@@ -1,0 +1,34 @@
+{
+  "songs": [
+    {
+      "song": "Baby, That's You",
+      "band": "Magnolia Sons",
+      "album": "Baby, That's You",
+      "genre": "Motown-Pop"
+    },
+    {
+      "song": "Side Pony",
+      "band": "Lake Street Dive", 
+      "album": "Side Pony",
+      "genre": "Soul"    
+    },
+    {
+      "song": "Wait For It",
+      "band": "Original Cast", 
+      "album": "Hamilton",
+      "genre": "Broadway"
+    },
+    {
+      "song": "Mrs. Robinson",
+      "band": "Simon & Garfunkel", 
+      "album": "Bookends",
+      "genre": "Folk"
+    },
+    {
+      "song": "Oh My Sweet Carolina",
+      "band": "Ryan Adams", 
+      "album": "Heartbreaker",
+      "genre": "Folk-Rock"      
+    }
+  ]
+}

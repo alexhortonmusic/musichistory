@@ -1,3 +1,5 @@
+'use strict';
+
 var listMusicView = $('#listMusicView'); // list music link
 var listView = $('#listView'); // container holding list view divs
 var addMusic = $('#addMusic'); // div added on 'add music' click event

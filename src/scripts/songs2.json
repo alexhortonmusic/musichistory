@@ -1,10 +1,10 @@
 {
   "songs": [
     {
-      "song": "The Logical Song",
-      "band": "Supertramp", 
-      "album": "Breakfast in America",
-      "genre": "Art-Rock"
+      "song": "Come Pick Me Up",
+      "band": "Ryan Adams", 
+      "album": "Heartbreaker",
+      "genre": "Folk-Rock"
     },
     {
       "song": "America",
@@ -16,7 +16,7 @@
       "song": "Guns and Ships",
       "band": "Original Cast", 
       "album": "Hamilton",
-      "genre": "Hip-Hop/Broadway"
+      "genre": "Broadway"
     },
     {
       "song": "I Don't Care About You",
