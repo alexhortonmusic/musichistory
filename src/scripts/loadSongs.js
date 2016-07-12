@@ -18,5 +18,6 @@ const ajaxCall = function (callback) {
 		callback();
 	});
 }
+console.log("songArr", songArr);
 
 module.exports = {songArr, ajaxCall};

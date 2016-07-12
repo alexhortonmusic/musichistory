@@ -7,7 +7,6 @@ let songArr = loadSongMod.songArr;
 
 // list/add view module
 const viewMod = require('./musicView.js');
-console.log(viewMod.goToListView);
 
 const songContainer = $("#container");
 const more = $('#more');
@@ -63,7 +62,6 @@ function print5songstoDom () {
 				<button class="delete" id="btn-${counter}">Delete</button>
 			</div>
 		`);
-	});
 	$(".delete").click(deleteSong);
 	more.append(`<a href="#">More ></a>`);
 }
@@ -135,22 +133,22 @@ function songObjToArray() {
 	}
 	songArr.push(songObj);
 	counter++;
-	songContainer.append(`
-		<div class="song" id="song-${counter}">
-				<h2>${songInput.val()}</h2>
+	songContainer.append(songString);
+	$(".delete").click(`
+			<div class="song" id="song-${counter}">
+				<h2>${song.song}</h2>
 				<div class="artist-name">
-					<p>${artistInput.val()}</p>
+					<p>${song.band}</p>
 				</div>
 				<div class="album-name">
-					<p><i>${albumInput.val()}</i></p>
+					<p><i>${song.album}</i></p>
 				</div>
 				<div class="song-genre">
-					<p>${genreInput.val()}</p>
+					<p>${song.genre}</p>
 				</div>
 				<button class="delete" id="btn-${counter}">Delete</button>
-		</div>
-	`);
-	$(".delete").click(deleteSong);
+			</div>
+		`);
 	songInput.val("");
 	artistInput.val("");
 	albumInput.val("");
