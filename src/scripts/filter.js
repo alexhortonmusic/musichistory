@@ -1,8 +1,8 @@
-'use strict';
+// 'use strict';
 
-const loadSongMod = require('./loadSongs.js');
-loadSongMod.ajaxCall(); 
-let songArr = loadSongMod.songArr;
+// const loadSongMod = require('./loadSongs.js');
+// const FirstSongsAjax = loadSongMod.FirstSongsAjax; 
+// let songArr = loadSongMod.songArr;
 
-console.log("songArr", songArr);
+// console.log("songArr", songArr);
 

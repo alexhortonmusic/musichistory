@@ -3,12 +3,20 @@
 
 // loads first 5 songs
 const loadSongMod = require('./loadSongs.js');
-loadSongMod.ajaxCall(print5songstoDom); // loads 5 songs to DOM
+const FirstSongsAJAX = loadSongMod.FirstSongsAJAX; 
 let songArr = loadSongMod.songArr;
+
+FirstSongsAJAX()
+		.then(function (songData) {
+			console.log("songData", songData);
+			print5songstoDom(songData.songs);
+		});
+
+console.log("songArr", songArr);
+
 
 // list/add view module
 const viewMod = require('./musicView.js');
-console.log(viewMod.goToListView);
 
 const songContainer = $("#container");
 const more = $('#more');
@@ -36,7 +44,7 @@ let selectAlbumArr = [
 	"Baby, That's You"
 ];
 
-populateSelectBox(selectAlbumArr, albumDrop)
+populateSelectBox(selectAlbumArr, albumDrop);
 
 // function to populate select boxes
 function populateSelectBox (arr, drop) {
@@ -45,8 +53,9 @@ function populateSelectBox (arr, drop) {
 	}
 }
 
-function print5songstoDom () {
-	$.each(songArr, (key, song) => {
+function print5songstoDom (songData) {
+	console.log("songData", songData);
+	$.each(songData, (key, song) => {
 		counter++;
 		// adds songs to DOM
 		songContainer.append(`
@@ -64,8 +73,8 @@ function print5songstoDom () {
 				<button class="delete" id="btn-${counter}">Delete</button>
 			</div>
 		`);
+		$(".delete").click(deleteSong);
 	});
-	$(".delete").click(deleteSong);
 	more.append(`<a href="#">More ></a>`);
 }
 
@@ -111,7 +120,7 @@ const addMusicView = $('#addMusicView');// add music link
 
 listMusicView.click(function () {
 	viewMod.goToListView();
-})
+});
 
 addMusicView.click(function () {
 	viewMod.goToAddView();
@@ -133,25 +142,24 @@ function songObjToArray() {
 		band: artistInput.val(),
 		album: albumInput.val(),
 		genre: genreInput.val()
-	}
+	};
 	songArr.push(songObj);
 	counter++;
 	songContainer.append(`
-		<div class="song" id="song-${counter}">
-				<h2>${songInput.val()}</h2>
+			<div class="song" id="song-${counter}">
+				<h2>${songObj.song}</h2>
 				<div class="artist-name">
-					<p>${artistInput.val()}</p>
+					<p>${songObj.band}</p>
 				</div>
 				<div class="album-name">
-					<p><i>${albumInput.val()}</i></p>
+					<p><i>${songObj.album}</i></p>
 				</div>
 				<div class="song-genre">
-					<p>${genreInput.val()}</p>
+					<p>${songObj.genre}</p>
 				</div>
 				<button class="delete" id="btn-${counter}">Delete</button>
-		</div>
-	`);
-	$(".delete").click(deleteSong);
+			</div>
+		`);
 	songInput.val("");
 	artistInput.val("");
 	albumInput.val("");
@@ -167,12 +175,11 @@ function songObjToArray() {
 function deleteSong () { // this does not delete object from array yet...
 	$(this).parent('.song').remove();
 	let songThing = $(this).parent('.song').song;
-	console.log("songArr", songArr);
 	$.each(songArr, function (i, el) {
 		if (this.song === songThing) {
 			songArr.splice(i, 1);
 		}
-	})
+	});
 }
 
 
@@ -184,24 +191,28 @@ function deleteSong () { // this does not delete object from array yet...
 
 const songArr = [];
 
-const LoadSongs1 = function (songData) {	
-	let songs = songData.songs;
-	$.each(songs, (key, song) => {
-		songArr.push(song);
+var FirstSongsAJAX = function() {
+	return new Promise((resolve, reject) => {
+		$.ajax({
+			url: "src/scripts/songs.json"
+		}).done(function (songData) {
+			resolve(songData);
+		}).fail(function(error) {
+			reject(error);
+		});
 	});
 };
 
-const ajaxCall = function (callback) {
-//loads first five songs
-	$.ajax({
-		url: "src/scripts/songs.json"
-	}).done(function (songData) {
-		LoadSongs1(songData);
-		callback();
-	});
-}
+// const FirstSongsPromise = function () {
+// //loads first five songs
+	// firstSongsAJAX()
+	// 	.then(function (songData) {
+	// 		console.log("songData", songData);
+	// 		songArr.push(songData);
+	// 	});
+// };
 
-module.exports = {songArr, ajaxCall};
+module.exports = {songArr, FirstSongsAJAX};
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -212,13 +223,11 @@ let listView = $('#listView'); // container holding list view divs
 let addMusic = $('#addMusic'); // div added on 'add music' click event
 
 let goToListView = function () {
-	console.log("Howdy");
 	listView.removeClass('hideListView');
 	addMusic.addClass('hideAddView');
 };
 
 let goToAddView = function () {
-	console.log("Howdy");
 	addMusic.removeClass('hideAddView');
 	listView.addClass('hideListView');
 };
